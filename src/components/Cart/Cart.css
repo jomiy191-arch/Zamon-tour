@@ -1,0 +1,194 @@
+/* =======================
+   SECTION
+======================= */
+.cart-section {
+  padding: 20px;
+  background: #f8fafc;
+}
+
+/* =======================
+   MAP HERO
+======================= */
+.cart-map-container {
+  width: 100%;
+  max-width: 1150px;       /* maximal width xarita bilan bir xil */
+  height: 320px;           /* desktop height */
+  margin: 0 auto 40px;     /* markaz + pastga space */
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* =======================
+   FORM CONTAINER
+======================= */
+.cart-container {
+  width: 100%;             /* full width responsive */
+  max-width: 1150px;       /* xarita bilan bir xil */
+  margin: 0 auto 60px;     /* markaz + pastga space */
+  background: white;
+  padding: 48px 36px;
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+/* TITLE */
+.cart-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.cart-subtitle {
+  text-align: center;
+  margin-bottom: 36px;
+  color: #14b8a6;
+  font-weight: 600;
+}
+
+/* =======================
+   2-QATORLI LAYOUT
+======================= */
+.cart-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* INPUT FIELD */
+.cart-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* FULL WIDTH FOR SELECTS */
+.cart-field-full {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* FLOATING LABEL */
+.cart-field label {
+  font-weight: 600;
+  color: #0f172a;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  background: white;
+  padding: 0 4px;
+}
+
+.cart-field input,
+.cart-field-full select {
+  padding: 18px 16px 6px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* FLOATING LABEL MOVE UP WHEN FOCUS OR NOT EMPTY */
+.cart-field input:focus + label,
+.cart-field input:not(:placeholder-shown) + label,
+.cart-field-full select:focus + label,
+.cart-field-full select:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 12px;
+  font-size: 13px;
+  color: #14b8a6;
+}
+
+/* INPUT FOCUS EFFECT */
+.cart-field input:focus,
+.cart-field-full select:focus {
+  border-color: #14b8a6;
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.35);
+  transform: scale(1.03);
+}
+
+/* INPUT HOVER EFFECT */
+.cart-field input:hover,
+.cart-field-full select:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.25);
+}
+
+/* =======================
+   BUTTON
+======================= */
+.cart-btn {
+  grid-column: span 2;
+  margin-top: 20px;
+  padding: 16px;
+  background: #14b8a6;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background: #0f766e;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(20, 184, 166, 0.4);
+}
+
+/* =======================
+   AOS ANIMATION SMOOTH
+======================= */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+@media (max-width: 1024px) {
+  .cart-map-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-form {
+    grid-template-columns: 1fr; /* 1 qator mobile */
+  }
+
+  .cart-field-full,
+  .cart-btn {
+    grid-column: span 1;
+  }
+
+  .cart-map-container {
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  .cart-container {
+    padding: 36px 22px;
+  }
+
+  .cart-title {
+    font-size: 2rem;
+  }
+}

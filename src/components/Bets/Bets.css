@@ -1,0 +1,119 @@
+.bets-section {
+  padding: 40px 75px;
+  background: linear-gradient(270deg, #26a6b4, #0f172a);
+  color: white;
+  position: relative;
+}
+
+/* Header */
+.bets-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bets-header h2 {
+  font-size: 2.8rem;
+}
+
+.bets-header p {
+  color: #cbd5e1;
+}
+
+/* Card */
+.bet-card {
+  position: relative;
+  height: 450px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  filter: brightness(0.6);
+  transition: all 0.5s ease;
+  transform: scale(0.9);
+}
+
+.bet-card.active {
+  filter: brightness(1);
+  transform: scale(1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  color: #26a6b4;
+}
+
+.card-stats {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deal-section {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+.deal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.deal-icon {
+  color: #26a6b4;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.reserve-btn {
+  background: #26a6b4;
+  border: none;
+  padding: 12px 45px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.reserve-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.btn-icon {
+  transition: 0.3s;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .bet-card {
+    height: 350px;
+  }
+}

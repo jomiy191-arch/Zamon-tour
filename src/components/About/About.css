@@ -1,0 +1,181 @@
+/* Reset va umumiy o'rnatmalar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+/* About section */
+.about-section {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* About header */
+.about-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-header p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #6b7280;
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+/* Tours list */
+.about-tours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-tour-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .about-tour-item {
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+}
+
+/* Tour image */
+.about-tour-image {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  border-radius: 2rem;
+  transition: transform 0.7s ease;
+}
+
+.about-tour-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+
+/* Tour content */
+.about-tour-content {
+  flex: 1;
+}
+
+.about-tour-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .about-tour-top {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.about-tour-top h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.about-tour-top p {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Button style */
+.about-btn {
+  padding: 0.85rem 2rem;
+  background-color: #14b8a6;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 10px 20px rgba(20, 184, 166, 0.2);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.about-btn:hover {
+  background-color: #0d9488;
+  transform: scale(1.05);
+}
+
+.about-btn:active {
+  transform: scale(0.95);
+}
+
+.about-tour-content p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-footer-hr {
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 1.75rem;
+  }
+  .about-header p {
+    font-size: 1rem;
+  }
+  .about-tour-image img {
+    height: 250px;
+  }
+  .about-tour-top {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* AOS animatsiyalarini qo'shish */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}

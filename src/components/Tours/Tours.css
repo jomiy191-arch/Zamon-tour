@@ -1,0 +1,202 @@
+/* -------------------------
+   General Styles
+------------------------- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff; /* Oq fon */
+  color: #1f2937;      /* Asosiy matn rangi */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* -------------------------
+   Section Header
+------------------------- */
+.section-header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* -------------------------
+   Tours List & Card
+------------------------- */
+.tours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tour-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #f9fafb; /* Card fon */
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* ... barcha oldingi CSS shu yerda qoladi ... */
+
+/* Tour Card Zoom Hover (Qo‘shimcha) */
+.tour-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+
+@media(min-width: 1024px){
+  .tour-card {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+/* -------------------------
+   Tour Image
+------------------------- */
+.tour-image {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+  border-radius: 1.5rem;
+}
+
+
+.tour-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-title h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.tour-title p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.tour-textLong {
+  margin: 1rem 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   Button (Zamonaviy)
+------------------------- */
+.tour-button {
+  padding: 0.5rem 1.5rem;       /* Optimal o‘lcham */
+  background: #14b8a6;          /* Asosiy rang */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;          /* 14px */
+  border-radius: 9999px;        /* Oval */
+  border: none;                 /* Border olib tashlandi */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(20, 184, 166, 0.3); /* Yumshoq shadow */
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.tour-button:hover {
+  background: #0d9488;          /* Hover rang o‘zgarishi */
+  transform: scale(1.08);       /* Biroz kattalashish */
+  box-shadow: 0 6px 12px rgba(13, 148, 136, 0.4);
+}
+
+/* -------------------------
+   Tour Meta Info
+------------------------- */
+.tour-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* -------------------------
+   Learn More Link
+------------------------- */
+.tour-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.tour-link:hover {
+  color: #2563eb;
+}
+
+/* -------------------------
+   Responsive Adjustments
+------------------------- */
+@media(max-width: 768px) {
+  .tour-image img {
+    height: 220px;
+  }
+
+  .tour-title h2 {
+    font-size: 20px;
+  }
+
+  .tour-title p,
+  .tour-textLong,
+  .meta-item {
+    font-size: 14px;
+  }
+
+  .tour-button {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}

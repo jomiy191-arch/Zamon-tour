@@ -1,0 +1,111 @@
+/* Hero section */
+.footer-hero {
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.footer-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
+}
+
+/* Container */
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    gap: 1.5rem; /* yozuv va button orasidagi masofa */
+}
+
+@media(min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 3rem; /* katta ekranlarda yanada kengroq */
+    }
+}
+
+/* Text styles */
+.footer-text {
+    color: white;
+}
+
+.footer-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media(min-width: 768px) {
+    .footer-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.footer-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Button */
+.footer-btn {
+    background-color: #81e6d9;
+    color: #065666;
+    font-weight: bold;
+    border: 3px solid white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    background-color: #065666;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media(min-width: 768px) {
+    .footer-bottom p {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,130 @@
+/* Section */
+.slider-section {
+  background-color: #f9fafb;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.slider-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.slider-header p {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 550px;
+  margin: 0.5rem auto 2rem;
+  text-align: center;
+}
+
+/* Slider wrapper */
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 450px;
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  perspective: 1500px; /* 3D effekt uchun */
+}
+
+/* Slider items */
+.slider-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-shrink: 0;
+  transform-style: preserve-3d;
+}
+
+.slider-item.active {
+  flex: 4;
+  height: 100%;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.slider-item.inactive {
+  flex: 0.8;
+  height: 90%;
+  transform: scale(0.85);
+  opacity: 0.6;
+}
+
+.slider-item:hover {
+  transform: scale(1.07);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .slider-item.inactive {
+    flex: 0.6;
+  }
+  .slider-item {
+    border-radius: 40px;
+  }
+}
+
+/* Overlay */
+.slider-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: inherit;
+  transition: background-color 0.3s;
+}
+
+.slider-item:hover .slider-overlay {
+  background-color: rgba(0,0,0,0.15);
+}
+
+/* Slide info */
+.slider-info {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: white;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slider-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.slider-info p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.slider-info.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+/* Icon Box */
+.slider-icon {
+  background-color: rgba(31,41,55,0.6);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
