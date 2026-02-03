@@ -49,14 +49,14 @@ const Contact = ({ lang = "uz" }) => {
   }, []);
 
   return (
-    <section id="contacts" className="contact-section">
+    <section id="contacts" className="contact-section" >
       {/* HERO */}
       <div
         className="contact-hero"
         style={{ backgroundImage: `url(${Head})` }}
-        id="contact-hero"
+        id="contact-hero" 
       >
-        <div className="contact-overlay" />
+        <div className="contact-overlay" id="contact" />
 
         <div className="contact-hero-content" data-aos="zoom-in">
           <span className="contact-subtitle">{t.subtitle}</span>

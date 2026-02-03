@@ -1,0 +1,4 @@
+/* Smooth scroll barcha anchorlar uchun */
+html {
+  scroll-behavior: smooth;
+}

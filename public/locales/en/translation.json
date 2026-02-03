@@ -1,0 +1,108 @@
+{
+"nav": {
+    "home": "Home",
+    "about": "About Us",
+    "tours": "Tours",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "dubai": {
+      "city": "Dubai",
+      "subtitle": "Discover the city of gold:",
+      "buttonGo": "Go",
+      "buttonExplore": "Explore More"
+    },
+    "sharm": {
+      "city": "Sharm El Sheikh",
+      "subtitle": "Discover the sunny paradise:",
+      "buttonGo": "Go",
+      "buttonExplore": "Explore More"
+    },
+    "istanbul": {
+      "city": "Istanbul",
+      "subtitle": "Discover the heart of Turkey:",
+      "buttonGo": "Go",
+      "buttonExplore": "Explore More"
+    },
+    "antalya": {
+      "city": "Antalya",
+      "subtitle": "Discover the beautiful city:",
+      "buttonGo": "Go",
+      "buttonExplore": "Explore More"
+    },
+    "population": "People",
+    "territory": "Area",
+    "avgPrice": "Average Price"
+  },
+  "about": {
+    "headerTitle": "Explore Our Tours",
+    "headerDesc": "Discover amazing travel destinations with our expert guides and curated experiences. Enjoy stress-free planning and unforgettable memories.",
+    "tour1Title": "African Safari Adventure",
+    "tour1Desc": "Embark on a thrilling safari journey across Africa's most breathtaking landscapes.",
+    "tour1Extra": "Experience wildlife up close and enjoy luxury lodges while exploring the heart of Africa.",
+    "tour2Title": "Air Travel Experience",
+    "tour2Desc": "Fly in comfort and style while discovering new horizons across the globe.",
+    "tour2Extra": "Our air travel packages ensure convenience, safety, and a premium travel experience.",
+    "btn": "Learn More"
+  },
+  "bets": {
+    "title": "Best Offers",
+    "desc": "Best offers selected for each city",
+    "people": "people",
+    "reserve": "Reserve",
+    "deal1": "5 Days Trip > Hotel Included",
+    "deal2": "Airplane Ticket Included",
+    "deal3": "Daily Places Visit"
+  },
+  "cart": {
+    "title": "Make Your Reservation",
+    "subtitle": "Through This Form",
+    "name": "Your Name",
+    "phone": "Your Phone Number",
+    "guests": "Number Of Guests",
+    "date": "Check In Date",
+    "destination": "Choose Your Destination",
+    "visa": "Choose Your Visa Support",
+    "button": "Make Your Reservation Now",
+    "destinations": ["Antalya", "Dubai", "Istanbul", "Sharm El Sheikh"],
+    "visas": ["Country", "Tourist Visa", "Business Visa", "No Visa Needed"]
+  },
+  "contact": {
+    "subtitle": "Book Your Preferred Deal Here",
+    "title": "Make Your Reservation",
+    "button": "Send Message",
+    "phoneTitle": "Make a Phone Call",
+    "emailTitle": "Contact Us via Email",
+    "addressTitle": "Visit Our Offices",
+    "addressText": "15/25, Chilanzar-9, Tashkent city"
+  },
+  "footer": {
+    "heading": "Are You Looking To Travel?",
+    "description": "Make a reservation by clicking the button",
+    "button": "Book Yours Now",
+    "copyright": "Copyright © 2026 Zamon Business Tour."
+  },
+  "make": {
+    "visaSupportTitle": "Visa support",
+    "visaSupportDesc": "Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey."
+  },
+  "slider": {
+    "subtitle": "Our Best Destinations",
+    "pages": "Discover the most popular travel locations",
+    "titles": ["Dubai", "Antalya", "Istanbul", "Sharm El Sheikh", "Paris"],
+    "texts": [
+      "Experience the city of gold.",
+      "Relax on the Turkish Riviera.",
+      "Where East meets West.",
+      "Dive into the Red Sea.",
+      "Romance and history combined."
+    ]
+  },
+  "toursSection": {
+    "sectionTitle": "Visit One Of Our Countries Now",
+    "sectionDesc": "Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences.",
+    "button": "Learn More",
+    "learnMore": "Learn More"
+  }
+}

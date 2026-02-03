@@ -1,60 +1,70 @@
 import React, { useState, useEffect } from "react";
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Best from "./components/About/About";
-import Make from "./components/Make/Make";
+import { I18nextProvider } from "react-i18next";
+import i18n, { initI18n } from "./i18n";
+
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
+import Bets from "./components/Bets/Bets";
+import Make from "./components/Make/Make";
 import Tours from "./components/Tours/Tours";
-import Contact from "./components/Contact/Contact";
 import Cart from "./components/Cart/Cart";
+import Contact from "./components/Contact/Contact";
+
 import Footer from "./components/Footer/Footer";
-import Slider from "./components/Slider/Slider";
+
+import { ThreeDots } from "react-loader-spinner"; // <-- ThreeDots import
 import "./App.css";
 
-const App = () => {
+function App() {
   const [lang, setLang] = useState("uz");
-  const [loading, setLoading] = useState(true);
+  const [ready, setReady] = useState(false);
+  const [showLoading, setShowLoading] = useState(true); // 3 soniya loader
 
-  // Birinchi ochilganda loading
+
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // 1.5 soniya
+    initI18n()
+      .then(() => setReady(true))
+      .catch(console.error);
+
+    // 3 soniya loading
+    const timer = setTimeout(() => setShowLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Til o‘zgartirilganda loading
-  const handleLangChange = (newLang) => {
-    setLoading(true);
-    setLang(newLang);
-    setTimeout(() => setLoading(false), 800);
-  };
+  useEffect(() => {
+    if (ready) i18n.changeLanguage(lang);
+  }, [lang, ready]);
 
-  if (loading) {
+  if (!ready || showLoading)
     return (
-      <div className="app-loader">
-        <div className="dots-loader">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div className="loading-container">
+        <ThreeDots
+          color="#1b8f7c"
+          height={80}
+          width={80}
+          ariaLabel="loading"
+        />
+        <p className="loading-text">Zamontour.uz</p>
       </div>
     );
-  }
+    
 
   return (
-    <>
-      <Header lang={lang} setLang={handleLangChange} />
-      <Hero lang={lang} />
-      <Best lang={lang} />
-      <hr />
-      <Make lang={lang} />
-      <About lang={lang} />
-      <Tours lang={lang} />
-      <Slider lang={lang} />
-      <Contact lang={lang} />
-      <Cart lang={lang} />
-      <Footer lang={lang} />
-    </>
+    <I18nextProvider i18n={i18n}>
+      <div className="App">
+        <Header lang={lang} setLang={setLang} />
+        <Hero />
+        <About />
+        <Bets lang={lang} />
+        <Make lang={lang} />
+        <Tours lang={lang} />
+        <Cart lang={lang} />
+        <Contact lang={lang} />
+        <Footer lang={lang} />
+      </div>
+    </I18nextProvider>
   );
-};
+}
 
 export default App;

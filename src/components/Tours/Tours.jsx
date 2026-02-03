@@ -6,10 +6,10 @@ import { FaGlobe, FaUser } from "react-icons/fa6";
 import { IoHomeSharp } from "react-icons/io5";
 import { GoArrowRight } from "react-icons/go";
 
-import Dubay from "./images/dubai2.jpg";
-import Count from "./images/country.jpg";
-import Istanbul from "./images/istanbul3.jpg";
-import Sharm from "./images/sharm2.jpg";
+import Dubay from "./Images/dubai2.jpg";
+import Count from "./Images/country.jpg";
+import Istanbul from "./Images/istanbul3.jpg";
+import Sharm from "./Images/sharm2.jpg";
 
 import "./Tours.css";
 

@@ -1,14 +1,16 @@
+// src/components/Header/Header.jsx
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Header.css";
-import logo from "./Images/Download.svg";
+import logo from "./Images/download.svg";
 import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
 
 const Header = ({ lang, setLang }) => {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [shrink, setShrink] = useState(false);
-  const [dark, setDark] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -17,14 +19,19 @@ const Header = ({ lang, setLang }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.className = dark ? "dark" : "light";
-  }, [dark]);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLang(lng);
+    setMenuOpen(false);
+  };
 
-  const texts = {
-    uz: { home: "Bosh sahifa", about: "Biz haqimizda", tours: "Sayohatlar", contact: "Aloqa" },
-    en: { home: "Home", about: "About", tours: "Tours", contact: "Contacts" },
-    ru: { home: "Главная", about: "О нас", tours: "Туры", contact: "Контакты" },
+  // Smooth scroll funktsiyasi
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
   };
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -33,29 +40,64 @@ const Header = ({ lang, setLang }) => {
     <header className={`Header ${shrink ? "shrink" : ""}`} data-aos="fade-down">
       <div className="container">
         <div className="header__container">
+          {/* Logo */}
           <div className="header__logo">
             <img className="Logo" src={logo} alt="Zamon Tour" />
           </div>
 
+          {/* Hamburger */}
           <div className={`burger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </div>
 
+          {/* Navbar */}
           <nav className={`Header__nav ${menuOpen ? "open" : ""}`}>
             <ul className="Header__list">
-              <li><a href="#home" onClick={() => setMenuOpen(false)}>{texts[lang].home}</a></li>
-              <li><a href="#about" onClick={() => setMenuOpen(false)}>{texts[lang].about}</a></li>
-              <li><a href="#tours" onClick={() => setMenuOpen(false)}>{texts[lang].tours}</a></li>
-              <li><a href="#contact" onClick={() => setMenuOpen(false)}>{texts[lang].contact}</a></li>
+              <li>
+                <a href="#home" onClick={() => scrollToSection("home")}>
+                  {t("nav.home")}
+                </a>
+              </li>
+              <li>
+                <a href="#about" onClick={() => scrollToSection("about")}>
+                  {t("nav.about")}
+                </a>
+              </li>
+              <li>
+                <a href="#tours" onClick={() => scrollToSection("tours")}>
+                  {t("nav.tours")}
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={() => scrollToSection("contact")}>
+                  {t("nav.contact")}
+                </a>
+              </li>
             </ul>
 
+            {/* Right section: language + socials */}
             <div className="header__right">
               <div className="lang">
-                <span onClick={() => setLang("uz")} className={lang === "uz" ? "active" : ""}>UZ</span>
-                <span onClick={() => setLang("en")} className={lang === "en" ? "active" : ""}>EN</span>
-                <span onClick={() => setLang("ru")} className={lang === "ru" ? "active" : ""}>RU</span>
+                <span
+                  onClick={() => changeLanguage("uz")}
+                  className={lang === "uz" ? "active" : ""}
+                >
+                  UZ
+                </span>
+                <span
+                  onClick={() => changeLanguage("en")}
+                  className={lang === "en" ? "active" : ""}
+                >
+                  EN
+                </span>
+                <span
+                  onClick={() => changeLanguage("ru")}
+                  className={lang === "ru" ? "active" : ""}
+                >
+                  RU
+                </span>
               </div>
 
               <div className="socials">
@@ -68,7 +110,6 @@ const Header = ({ lang, setLang }) => {
               </div>
             </div>
           </nav>
-
         </div>
       </div>
     </header>

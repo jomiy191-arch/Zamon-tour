@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "tours": "Sayohatlar",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "dubai": { "city": "Dubai", "subtitle": "Go'zal shaharni kashf eting:", "buttonGo": "Borish", "buttonExplore": "Ko‘proq kashf etish" },
+    "sharm": { "city": "Sharm El Sheikh", "subtitle": "Quyoshli jannatni kashf eting:", "buttonGo": "Borish", "buttonExplore": "Ko‘proq kashf etish" },
+    "istanbul": { "city": "Istanbul", "subtitle": "Turkiya qalbini kashf eting:", "buttonGo": "Borish", "buttonExplore": "Ko‘proq kashf etish" },
+    "antalya": { "city": "Antalya", "subtitle": "Go'zal shaharni kashf eting:", "buttonGo": "Borish", "buttonExplore": "Ko‘proq kashf etish" },
+    "population": "Aholi",
+    "territory": "Hudud",
+    "avgPrice": "O‘rtacha narx"
+  },
+  "about": {
+    "headerTitle": "Sayohatlarimizni kashf eting",
+    "headerDesc": "Mutaxassis qo'llanmalarimiz va tanlangan tajribalarimiz bilan ajoyib sayohat manzillarini kashf qiling. Rejalashtirish stresssiz va unutilmas xotiralar bilan to‘la bo‘ladi.",
+    "tour1Title": "Afrika Safari Sarguzashtlari",
+    "tour1Desc": "Afrikaning eng ajoyib manzaralari bo‘ylab hayajonli safari safariga chiqing.",
+    "tour1Extra": "Yovvoyi tabiatni yaqinroq kuzatib, Afrikaning markazini o‘rganishda hashamatli mehmonxonalardan bahramand bo‘ling.",
+    "tour2Title": "Havo Sayohati Tajribasi",
+    "tour2Desc": "Dunyo bo‘ylab yangi ufqlarni kashf etishda qulaylik va uslubda uching.",
+    "tour2Extra": "Bizning havo sayohati paketlarimiz qulaylik, xavfsizlik va premium sayohat tajribasini kafolatlaydi.",
+    "btn": "Ko‘proq bilish"
+  },
+  "bets": {
+    "title": "Eng Yaxshi Takliflar",
+    "desc": "Har bir shahar uchun maxsus tanlangan takliflar",
+    "people": "odam",
+    "reserve": "Rezervatsiya Qiling",
+    "deal1": "5 kunlik sayohat > Mehmonxona kiritilgan",
+    "deal2": "Samolyot chiptasi kiritilgan",
+    "deal3": "Kunlik diqqatga sazovor joylarga tashrif"
+  },
+  "cart": {
+    "title": "Rezervatsiyangizni amalga oshiring",
+    "subtitle": "Ushbu forma orqali",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "guests": "Mehmonlar soni",
+    "date": "Kelish sanasi",
+    "destination": "Manzilni tanlang",
+    "visa": "Viza qo‘llab-quvvatlashni tanlang",
+    "button": "Rezervatsiyani amalga oshiring",
+    "destinations": ["Antalya", "Dubay", "Istanbul", "Sharm El Sheikh"],
+    "visas": ["Mamlakat", "Turistik viza", "Biznes viza", "Viza kerak emas"]
+  },
+  "contact": {
+    "title": "Buyurtma Berish",
+    "subtitle": "Eng qulay taklifni shu yerda bron qiling",
+    "button": "Xabar Yuborish",
+    "phoneTitle": "Telefon orqali bog‘lanish",
+    "emailTitle": "Email orqali yozing",
+    "addressTitle": "Ofisimizga tashrif",
+    "addressText": "15/25, Chilonzor-9, Toshkent shahri"
+  },
+  "footer": {
+    "heading": "Sayohat qilmoqchimisiz?",
+    "description": "Tugmani bosib band qilishingiz mumkin",
+    "button": "Hozir Band Qiling",
+    "copyright": "Mualliflik huquqi © 2026 Zamon Business Tour."
+  },
+  "make": {
+    "visaSupportTitle": "Visa support",
+    "visaSupportDesc": "Tinch sayohat uchun vizalar bo‘yicha mutaxassislarimiz yordam beradi. Biz sizga qulay va to‘liq yo‘l-yo‘riq taqdim etamiz."
+  },
+  "slider": {
+    "subtitle": "Eng yaxshi manzillarimiz",
+    "pages": "Eng mashhur sayohat joylarini kashf eting",
+    "titles": ["Dubay", "Antalya", "Istanbul", "Sharm El Sheikh", "Parij"],
+    "texts": [
+      "Oltin shaharni kashf eting.",
+      "Turkiya Rivierasida dam oling.",
+      "Sharq va G‘arb uchrashadigan shahar.",
+      "Qizil dengizga sho‘ng‘ing.",
+      "Romantika va tarix birlashadi."
+    ]
+  },
+  "toursSection": {
+    "sectionTitle": "Hozir Bizning Mamlakatlardan Biriga Tashrif Buyuring",
+    "sectionDesc": "Har bir shahardagi eng yaxshi takliflarni kashf eting, siz uchun maxsus tayyorlangan. Tejamkorlik olamiga sho'ng'ing va tengsiz tajribalarni rohatlaning.",
+    "button": "Ko'proq bilish",
+    "learnMore": "Batafsil o'rganish"
+  }
+}

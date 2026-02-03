@@ -1,8 +1,26 @@
+/* =====================================================
+   RESET & BASE
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
 
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',system-ui,sans-serif; }
-a { text-decoration:none; color:inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* HEADER */
+/* Smooth scroll for all anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
 .Header {
   position: fixed;
   top: 0; 
@@ -10,7 +28,7 @@ a { text-decoration:none; color:inherit; }
   width: 100%;
   background: #26a6b4;
   color: #fff;
-  z-index: 1000;
+  z-index: 9999; /* oldingi 1000 o‘rniga balandroq */
   transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
   box-shadow: 0 6px 24px rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
@@ -24,7 +42,9 @@ a { text-decoration:none; color:inherit; }
   background: rgba(38, 166, 180, 0.98);
 }
 
-/* CONTAINER */
+/* =====================================================
+   CONTAINER
+===================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -39,31 +59,36 @@ a { text-decoration:none; color:inherit; }
   width: 100%;
 }
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 .header__logo { 
   display: flex; 
   align-items: center; 
   gap: 10px; 
   z-index: 1001;
 }
+
 .header__logo .Logo { 
   height: 40px; 
   margin-left: 40px;
   cursor: pointer; 
   transition: all 0.4s ease; 
 }
+
 .Header.shrink .header__logo .Logo { 
   height: 32px; 
 }
 
-/* NAVIGATION */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 .Header__nav {
   display: flex;
   align-items: center;
   gap: 150px;
 }
 
-/* NAV LIST */
 .Header__list {
   list-style: none;
   display: flex;
@@ -71,10 +96,6 @@ a { text-decoration:none; color:inherit; }
   align-items: center;
   margin: 0;
   padding: 0;
-}
-
-.Header__list li {
-  position: relative;
 }
 
 .Header__list li a {
@@ -108,7 +129,9 @@ a { text-decoration:none; color:inherit; }
   width: 100%; 
 }
 
-/* BURGER MENU */
+/* =====================================================
+   BURGER MENU (MOBILE)
+===================================================== */
 .burger {
   display: none;
   flex-direction: column;
@@ -143,7 +166,9 @@ a { text-decoration:none; color:inherit; }
   transform: rotate(-45deg) translateY(2px);
 }
 
-/* HEADER RIGHT */
+/* =====================================================
+   HEADER RIGHT (LANG + SOCIALS)
+===================================================== */
 .header__right { 
   display: flex; 
   align-items: center; 
@@ -207,11 +232,19 @@ a { text-decoration:none; color:inherit; }
   box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
 }
 
-/* RESPONSIVE STYLES */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+/* Tablet & below */
+@media screen and (max-width: 1200px) {
+  .container { max-width: 95%; padding: 0 15px; }
+  .Header__nav { gap: 30px; }
+  .Header__list { gap: 20px; }
+}
+
+/* Mobile menu */
 @media screen and (max-width: 992px) {
-  .burger { 
-    display: flex; 
-  }
+  .burger { display: flex; }
 
   .Header__nav {
     position: fixed;
@@ -233,9 +266,7 @@ a { text-decoration:none; color:inherit; }
     overflow-y: auto;
   }
 
-  .Header__nav.open { 
-    right: 0; 
-  }
+  .Header__nav.open { right: 0; }
 
   .Header__list {
     flex-direction: column;
@@ -261,76 +292,19 @@ a { text-decoration:none; color:inherit; }
     justify-content: center;
   }
 
-  .lang { 
-    padding: 10px 15px; 
-    gap: 10px; 
-    border-radius: 50px; 
-    border: 1px solid rgba(255,255,255,0.3); 
-  }
-
-  .lang span { 
-    font-size: 1rem; 
-    padding: 6px 15px; 
-  }
-
-  .social-icon { 
-    width: 45px; 
-    height: 45px; 
-    font-size: 1.2rem; 
-    margin: 0 5px; 
-  }
+  .lang { padding: 10px 15px; gap: 10px; }
+  .lang span { font-size: 1rem; padding: 6px 15px; }
+  .social-icon { width: 45px; height: 45px; font-size: 1.2rem; margin: 0 5px; }
 }
 
-/* Tablet */
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-  .container {
-    max-width: 95%;
-    padding: 0 15px;
-  }
-  
-  .Header__nav {
-    gap: 30px;
-  }
-  
-  .Header__list {
-    gap: 20px;
-  }
-}
-
-/* Mobile */
+/* Mobile XS */
 @media screen and (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-  
-  .header__logo .Logo {
-    height: 30px;
-  }
-  
-  .Header.shrink .header__logo .Logo {
-    height: 28px;
-  }
-  
-  .Header__nav {
-    padding: 100px 20px 30px;
-  }
-  
-  .Header__list li a {
-    font-size: 1.1rem;
-  }
-  
-  .lang {
-    padding: 8px 12px;
-  }
-  
-  .lang span {
-    font-size: 0.9rem;
-    padding: 5px 12px;
-  }
-  
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
+  .container { padding: 0 15px; }
+  .header__logo .Logo { height: 30px; }
+  .Header.shrink .header__logo .Logo { height: 28px; }
+  .Header__nav { padding: 100px 20px 30px; }
+  .Header__list li a { font-size: 1.1rem; }
+  .lang { padding: 8px 12px; }
+  .lang span { font-size: 0.9rem; padding: 5px 12px; }
+  .social-icon { width: 40px; height: 40px; font-size: 1rem; }
 }
