@@ -98,7 +98,7 @@
 
 .contact-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 22px 50px rgba(134, 190, 184, 0.28);
+  box-shadow: 0 22px 50px rgba(20, 184, 166, 0.28);
 }
 
 .contact-card-icon {
