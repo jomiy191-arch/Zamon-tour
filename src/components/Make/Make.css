@@ -48,7 +48,7 @@
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent, rgba(190, 65, 65, 0.6));
+  background: linear-gradient(to bottom, transparent, rgba(92, 14, 14, 0.6));
 }
 
 .card-content {
