@@ -95,7 +95,7 @@
   position: absolute;
   bottom: 1.5rem;
   left: 1.5rem;
-  color: rgb(127, 12, 12);
+  color: white;
   transition: opacity 0.5s, transform 0.5s;
 }
 
