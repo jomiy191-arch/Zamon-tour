@@ -137,7 +137,7 @@ body {
 }
 
 .tour-button:hover {
-  background: #0d9488;          /* Hover rang o‘zgarishi */
+  background: #a1bbb9;          /* Hover rang o‘zgarishi */
   transform: scale(1.08);       /* Biroz kattalashish */
   box-shadow: 0 6px 12px rgba(13, 148, 136, 0.4);
 }
