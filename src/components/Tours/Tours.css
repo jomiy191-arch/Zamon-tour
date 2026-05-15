@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background: #8fb0d2; /* Card fon */
+  background: #f9fafb; /* Card fon */
   border-radius: 1.5rem;
   padding: 1.5rem;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
