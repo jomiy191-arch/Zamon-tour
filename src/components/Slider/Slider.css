@@ -81,7 +81,7 @@
 .slider-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.25);
+  background-color: rgba(210, 51, 51, 0.25);
   border-radius: inherit;
   transition: background-color 0.3s;
 }
