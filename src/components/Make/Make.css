@@ -108,7 +108,7 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  color: white;
+  color: rgb(226, 50, 50);
 }
 
 .reserve-btn:hover .btn-icon {
