@@ -1,7 +1,7 @@
 .make-section {
   padding: 40px 75px;
   background: linear-gradient(270deg, #26a6b4, #0f172a);
-  color: white;
+  color: rgb(183, 68, 68);
   position: relative;
 }
 
