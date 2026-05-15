@@ -131,7 +131,7 @@ body {
   border: none;                 /* Border olib tashlandi */
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(20, 184, 166, 0.3); /* Yumshoq shadow */
+  box-shadow: 0 4px 6px rgba(123, 215, 205, 0.3); /* Yumshoq shadow */
   align-self: flex-start;
   margin-bottom: 1rem;
 }
