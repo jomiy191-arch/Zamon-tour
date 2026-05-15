@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,13 +6,13 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* SECTION */
+
 .contact-section {
   background: #f8fafc;
   padding-bottom: 120px;
 }
 
-/* HERO */
+
 .contact-hero {
   position: relative;
   height: 500px;
@@ -24,14 +24,14 @@
   transition: all 0.3s ease;
 }
 
-/* OVERLAY */
+
 .contact-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, rgba(0,0,0,0.55), rgba(0,0,0,0.13));
 }
 
-/* HERO CONTENT */
+
 .contact-hero-content {
   position: relative;
   z-index: 2;
@@ -132,6 +132,7 @@
   color: #0f766e;
   line-height: 1.4;
 }
+
 
 /* ===== MEDIA ===== */
 
